@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    overflow: hidden; /* Impede a barra de rolagem */
+    background-color: #000000;
+}
+
+section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000; /* Cor de fundo padrão */
+    transition: all 1s ease-in-out; /* Transição para o efeito de saída */
+    opacity: 0;
+    font-family: "Montserrat", serif;
+}
+
+section.active {
+    z-index: 1; /* Garante que a seção ativa fique por cima */
+    visibility: visible; /* Exibe a seção ativa */
+    opacity: 1;
+}
+
+section.exit {
+    transform: translate(100%, 0); /* Move a seção para a direita */
+    opacity: 0;
+}
+
+section:not(.active) {
+    visibility: hidden; /* Esconde todas as seções que não estão ativas */
+}
+
+/* Estilos específicos para cada seção */
+#section1 { background-color: #000000; }
+#section2 { background-color: #000000; }
+#section3 { background-color: #000000; }
+#section4 { background-color: #000000; }
+
+
+/* Estilos para o botão */
+
+button {
+    background-color: #000000;
+    border: solid 1px #ffffff;
+    color: white;
+    padding: 1rem 3rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* section1  */
+
+#section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo {
+    text-align: center;
+    color: #fff; /* Cor do texto branca para contrastar com a imagem de fundo */
+    padding: 20px;
+}
+
+.conteudo h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.conteudo p {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+
+
+/* section2  */
+#section2 {
+    overflow: hidden; /* Esconde conteúdo que ultrapassa os limites da seção */
+    color: #fff;
+}
+
+.conteudo2 {
+    position: relative; /* Permite posicionamento absoluto dos elementos filhos */
+    width: 90%; /* Largura do conteúdo */
+    max-width: 960px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    height: 100%; /* Altura total da seção */
+    display: flex; /* Ativa o Flexbox para alinhar os elementos */
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+}
+
+.foto {
+    position: absolute; /* Posicionamento absoluto */
+    width: 300px; /* Largura das fotos */
+    height: 300px; /* Altura das fotos */
+    object-fit: cover; /* Mantém a proporção da imagem e cobre o espaço */
+    border-radius: 50%; /* Deixa as fotos redondas */
+    border: solid 2px #fff; /* Adiciona uma borda branca */
+}
+
+.esquerda {
+    top: 16%; /* Distância do topo */
+    left: 0; /* Distância da esquerda */
+}
+
+.direita {
+    bottom: 16%; /* Distância da base */
+    right: 0; /* Distância da direita */
+}
+
+.texto {
+    text-align: center; /* Alinha o texto ao centro */
+    margin: 20px 0; /* Espaçamento entre o texto e as fotos */
+}
+
+.texto h2 {
+    font-size: 2em; /* Tamanho do título */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.texto p {
+    font-size: 1.2em; /* Tamanho do parágrafo */
+    margin-bottom: 20px; /* Espaçamento abaixo do parágrafo */
+}
+
+@media (max-width: 768px) {
+    .foto {
+        width: 200px;
+        height: 200px;
+    }
+
+    .texto h2 {
+        font-size: 1.5em;
+    }
+
+    .texto p {
+        font-size: 1em;
+    }
+}
+
+
+/* section3  */
+
+#section3 {
+    overflow: hidden; /* Esconde conteúdo que ultrapassa os limites da seção */
+}
+
+.conteudo {
+    display: flex; /* Ativa o Flexbox para alinhar os elementos */
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    padding: 50px; /* Espaçamento interno do conteúdo */
+}
+
+.foto3 {
+    width: 300px; /* Largura da foto */
+    height: 400px; /* Altura da foto */
+    object-fit: cover; /* Mantém a proporção da imagem e cobre o espaço */
+    border-radius: 10px; /* Arredonda os cantos da foto */
+    margin-bottom: 30px; /* Espaçamento abaixo da foto */
+}
+
+#section3 .texto p strong {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .foto {
+        width: 200px;
+        height: 200px;
+    }
+
+    .texto h2 {
+        font-size: 1.5em;
+    }
+
+    .texto p {
+        font-size: 1em;
+    }
+}
+
+/* section4  */ 
+
+#section4 {
+    overflow: hidden; /* Esconde conteúdo que ultrapassa os limites da seção */
+}
+
+#section4 .conteudo p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #fff;
+}
+
+/* section-namoro */
+
+.section-namoro {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column; /* Mantém o alinhamento vertical dos elementos */
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.conteudo-namoro {
+    text-align: center;
+}
+
+.conteudo-namoro h5 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.botoes {
+    display: flex; /* Garante que os botões fiquem lado a lado */
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os botões */
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+
+#sim {
+    color: #fff;
+}
+
+#nao {
+    color: #fff;
+    position: relative;
+}
+
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fixo na tela */
+    z-index: 1; /* Sobreposto a outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite rolagem se o conteúdo for maior */
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente */
+}
+
+.modal-conteudo {
+    background-color: #ffffff;
+    margin: 15% auto; /* Centralizado na tela */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    color: #ff0000;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.fechar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* section-finalizacao */
+
+.section-finalizacao {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: #333;
+}
+
+.conteudo-finalizacao {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.conteudo-finalizacao h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.conteudo-finalizacao p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.conteudo-finalizacao a {
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 10px 20px;
+    border: solid 2px #ffffff;
+}

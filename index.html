@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoAndIsaStory</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/CSS/style.css" />
+</head>
+
+<body>
+    <section id="section1" class="active">
+        <div class="conteudo">
+            <h1>Loan e Isadora</h1>
+            <p>Uma história prestes a começar</p>
+            <button onclick="transicao(1, 2)">Começar</button>
+        </div>
+    </section>
+    <section id="section2">
+        <div class="conteudo2">
+            <img src="./src/Img/img_isa.jpeg" alt="Foto Esquerda" class="foto esquerda">
+            <div class="texto">
+                <h2>Duas Almas, uma Conexão</h2>
+                <p>Lado a lado no destino, mesmo quando a moldura nos separa</p>
+                <button onclick="transicao(2, 3)">Avançar</button>
+            </div>
+            <img src="./src/Img/img_lo.jpg" alt="Foto Direita" class="foto direita">
+        </div>
+    </section>
+    <section id="section3">
+        <div class="conteudo">
+            <img src="./src/Img/img_print.jpg" alt="Foto da Seção 3" class="foto3">
+            <div class="texto">
+                <h2>Um simples Parabéns, me deu a oportunidade perfeita</h2>
+                <p>
+                    A oportunidade que pedi a Deus, e Ele me atendeu. Me deu a chance de fazer parte da sua vida, e, de
+                    todos os aniversários, esse foi o mais especial—porque veio acompanhado do melhor presente:
+                    <strong>você</strong>
+                </p>
+                <button onclick="transicao(3, 4)">Avançar</button>
+            </div>
+        </div>
+    </section>
+    <section id="section4">
+        <div class="conteudo">
+            <p>
+                Mesmo não sendo bom com palavras, senti a necessidade de escrever algo – talvez um pouco formal –, mas
+                que expressasse o que sinto e o quanto você tem se tornado especial para mim em tão pouco tempo. Desde
+                que começamos a conversar, percebo que, a cada dia, meu carinho por você cresce.
+            </p>
+            <p>
+                Cada interação, cada conversa, cada áudio, cada foto que me manda no WhatsApp – e até mesmo as
+                incontáveis vezes em que morremos juntos no Minecraft – só reforçam a certeza de que você é única para
+                mim.
+            </p>
+            <p>
+                Então, que isso fique registrado: eu tentarei ser o seu príncipe encantado, ainda que sem ouro, sem
+                beleza, sem joias caras, sem tapete vermelho e sem castelo. Mas com um desejo intenso e incessante de te
+                amar.
+            </p>
+            <button onclick="transicao(4, 5)">Avançar</button>
+        </div>
+    </section>
+    <section id="section5" class="section-namoro">
+        <div class="conteudo-namoro">
+            <h5>Quer namorar comigo?</h5>
+            <div class="botoes">
+                <button onclick="transicao(5, 6)" id="sim">Sim</button>
+                <button id="nao">Não</button>
+            </div>
+            <div id="modal-nao" class="modal">
+                <div class="modal-conteudo">
+                    <span class="fechar">&times;</span>
+                    <p>Este botão está desabilitado por tempo indeterminado. <br> Boa tentativa, meu bem!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section6" class="section-finalizacao">
+        <div class="conteudo-finalizacao">
+            <h2>Gloriaaaaaaa</h2>
+            <p>
+                Fico imensamente feliz por você ter aceitado ser minha namorada e dona. Quero sempre estar ao seu lado
+                e, a partir de agora, conte comigo para tudo que precisar. Estarei aqui, exclusivamente para você!
+                <br>
+                E agora, seu Ratinho preparou um vídeo especial...
+            </p>
+            <a href="https://youtu.be/1Cm6D0L7HmI?si=sBN2gBGZfeL5s28n" target="_blank">
+                Vídeo de finalização
+            </a>
+        </div>
+    </section>
+
+    <script src="./src/JS/script.js"></script>
+    <script src="./src/JS/not.js"></script>
+</body>
+
+</html>
